@@ -1,0 +1,19 @@
+{
+  "name": "rpg-docs",
+  "version": "0.10.0",
+  "description": "Unofficial Online Realtime D&D 5e App",
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ThaumRystra/RPG-Docs"
+  },
+  "author": "Stefan Zermatten",
+  "dependencies": {
+    "@polymer/polymer": "^1.2.5-npm-test.2",
+    "babel-runtime": "^6.23.0",
+    "bcrypt": "^1.0.2",
+    "bower": "^1.7.9"
+  }
+}

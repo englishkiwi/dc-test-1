@@ -1,0 +1,22 @@
+.healthCard paper-diff-slider{
+	width: 100%;
+	margin-right: 8px;
+}
+
+.healthCard #stableButton {
+	color: #b71c1c;
+	transition: color 0.4s ease;
+	width: 100%
+}
+
+.healthCard #stableButton:before {
+	content: "Unstable";
+}
+
+.healthCard #stableButton.stable {
+	color: #1b5e20;
+}
+
+.healthCard #stableButton.stable:before{
+	content: "Stable";
+}
