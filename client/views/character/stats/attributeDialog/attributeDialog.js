@@ -37,6 +37,7 @@ var stats = {
 	"speed":{"name":"Speed"},
 	"proficiencyBonus":{"name":"Proficiency Bonus"},
 	"custom":{"name":"Custom Points"},
+    "ki":{"name":"Ki Points"},
 	"sorceryPoints":{"name":"Sorcery Points"},
 	"rages":{"name":"Rages"},
 	"rageDamage":{"name":"Rage Damage"},

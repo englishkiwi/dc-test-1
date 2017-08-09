@@ -38,6 +38,7 @@ var stats = [
 	{stat: "speed", name: "Speed", group: "Stats"},
 	{stat: "proficiencyBonus", name: "Proficiency Bonus", group: "Stats"},
 	{stat: "custom", name: "Custom Points", group: "Stats"},
+    {stat: "ki", name: "Ki Points", group: "Stats"},
 	{stat: "sorceryPoints", name: "Sorcery Points", group: "Stats"},
 	{stat: "rages", name: "Rages", group: "Stats"},
 	{stat: "rageDamage", name: "Rage Damage", group: "Stats"},
