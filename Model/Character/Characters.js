@@ -389,6 +389,14 @@ Characters.calculate = {
 		);
 		return prof && prof.value || 0;
 	}),
+    resource: memoize(function(charId, skillName){
+		//return largest value in proficiency array
+		var prof = Resources.findOne(
+			{charId: charId, name: skillName, enabled: true},
+			{sort: {value: -1}}
+		);
+		return prof && prof.value || 0;
+	}),
 	passiveSkill: memoize(function(charId, skillName){
 		var skill = Characters.calculate.getField(charId, skillName);
 		var mod = +Characters.calculate.skillMod(charId, skillName);
