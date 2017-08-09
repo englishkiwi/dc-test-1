@@ -12,6 +12,14 @@
 			<!--superiorityDice-->
 			{{>resource name="superiorityDice" title="Superiority Dice" color="teal" char=this}}
 
+            <!--Resources-->
+			<div>
+                {{#each resource in resources}}
+					{{>attackListItem attack=attack charId=_id}}
+                    {{>resource name="superiorityDice" title="Superiority Dice" color="teal" char=this}}
+				{{/each}}
+			</div>
+            
 			<!--Attacks-->
 			<div>
 				<paper-material class="card">
@@ -112,7 +120,7 @@
 <template name="resource">
 	{{#if characterCalculate "attributeBase" char._id name}}
 	<div>
-		<paper-material class="card layout horizontal featureCard">
+		<paper-material class="card layout horizontal">
 			<div class="left {{getColor}} paper-font-display1 white-text layout horizontal center">
 				<div style="margin-right: 8px;">
 					<paper-icon-button class="resourceUp"
@@ -128,7 +136,7 @@
 				<!--<div>/{{char.attributeBase name}}</div>-->
 			</div>
 			<div class="right clickable flex layout horizontal center">
-				{{title}}
+				{{> UI.dynamic template=nameInputTemplate}}
 			</div>
 		</paper-material>
 	</div>
@@ -159,4 +167,12 @@
 			</div>
 		</div>
 	</div>
+</template>
+
+<template name="nameInput">
+	<paper-input class="nameInput sideMargin"
+				 label="Name"
+				 floatinglabel
+				 value={{name}}
+				 flex></paper-input>
 </template>
