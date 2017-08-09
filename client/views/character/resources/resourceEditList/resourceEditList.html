@@ -1,0 +1,16 @@
+<!--needs to be given charId, parentId and parentCollection-->
+<template name="resourceEditList">
+	{{#if resources.count}}
+		<div id="resources">
+			<div class="paper-font-title">Resources</div>
+			{{#each resources}}
+				{{>resourceEdit}}
+			{{/each}}
+		</div>
+	{{/if}}
+	<paper-button id="addResourceButton"
+				  class="red-button"
+				  raised>
+		Add Resource
+	</paper-button>
+</template>
