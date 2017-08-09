@@ -36,7 +36,7 @@ var stats = {
 	"dexterityArmor":{"name":"Dexterity Armor Bonus"},
 	"speed":{"name":"Speed"},
 	"proficiencyBonus":{"name":"Proficiency Bonus"},
-	"ki":{"name":"Ki Points"},
+	"custom":{"name":"Custom Points"},
 	"sorceryPoints":{"name":"Sorcery Points"},
 	"rages":{"name":"Rages"},
 	"rageDamage":{"name":"Rage Damage"},
