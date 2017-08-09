@@ -1,0 +1,20 @@
+<!--needs to be given charId, parentId and parentCollection-->
+<template name="resourcesEditList">
+	{{#if resources.length}}
+		<div class="resourcesEditList">
+			<div class="paper-font-title">Resources</div>
+			<table class="wideTable" style="width: 100%;">
+				{{#each resources}}
+					<tr class="resource" data-id={{_id}}>
+						{{>resourceView}}
+						<td>
+							<paper-icon-button class="edit-resource" icon="create">
+							</paper-icon-button>
+						</td>
+					</tr>
+				{{/each}}
+			</table>
+		</div>
+	{{/if}}
+	<paper-button id="addEffectButton" class="red-button"  raised>Add Resource</paper-button>
+</template>
