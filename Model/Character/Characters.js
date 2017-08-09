@@ -46,7 +46,7 @@ Schemas.Character = new SimpleSchema({
 	level7SpellSlots: {type: Schemas.Attribute},
 	level8SpellSlots: {type: Schemas.Attribute},
 	level9SpellSlots: {type: Schemas.Attribute},
-	ki:               {type: Schemas.Attribute},
+	custom:           {type: Schemas.Attribute},
 	sorceryPoints:    {type: Schemas.Attribute},
 	rages:            {type: Schemas.Attribute},
 	superiorityDice:  {type: Schemas.Attribute},
