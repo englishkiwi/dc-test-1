@@ -64,3 +64,4 @@ makeChild(Resources, ["enabled"]); //children of lots of things
 
 Resources.allow(CHARACTER_SUBSCHEMA_ALLOW);
 Resources.deny(CHARACTER_SUBSCHEMA_DENY);
+});
