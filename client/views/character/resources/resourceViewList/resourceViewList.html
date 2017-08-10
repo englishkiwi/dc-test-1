@@ -1,0 +1,12 @@
+<template name="resourceViewList">
+	{{#if resources.count}}
+		<div class="resources">
+			<div class="paper-font-title" style="margin-bottom: 8px;">
+				Resources
+			</div>
+			{{#each resources}}
+				{{> resourceView}}
+			{{/each}}
+		</div>
+	{{/if}}
+</template>

@@ -389,6 +389,14 @@ Characters.calculate = {
 		);
 		return prof && prof.value || 0;
 	}),
+    resource: memoize(function(charId, skillName){
+		//return largest value in proficiency array
+		var res = Resources.findOne(
+			{charId: charId, name: skillName, enabled: true},
+			{sort: {value: -1}}
+		);
+		return res && res.value || 0;
+	}),
 	passiveSkill: memoize(function(charId, skillName){
 		var skill = Characters.calculate.getField(charId, skillName);
 		var mod = +Characters.calculate.skillMod(charId, skillName);
@@ -538,6 +546,7 @@ if (Meteor.isServer){
 		Features      .remove({charId: character._id});
 		Notes         .remove({charId: character._id});
 		Proficiencies .remove({charId: character._id});
+        Resources     .remove({charId: character._id});
 		SpellLists    .remove({charId: character._id});
 		Items         .remove({charId: character._id});
 		Containers    .remove({charId: character._id});
