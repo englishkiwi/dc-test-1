@@ -128,8 +128,18 @@ Template.effectView.helpers({
 		}
 	},
 	statName: function(){
+        if (stats[this.stat] === "custom") 
+            return "statInput";
 		return stats[this.stat] && stats[this.stat].name || "No Stat";
 	},
+    
+    nameInputTemplate: function(){
+		if (!this.type) return null;
+		if (this.type === "skill" ||
+			this.type === "save") return "nameDropdown";
+		return "nameInput";
+	},
+    
 	operationName: function(){
 		if (
 			this.operation === "proficiency" ||
