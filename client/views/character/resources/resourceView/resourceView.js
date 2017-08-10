@@ -50,7 +50,7 @@ Template.resourceView.helpers({
 		) return null;
 		if (stats[this.stat] && stats[this.stat].group === "Weakness/Resistance")
 			return null;
-		if (this.operation === "add" && evaluateEffect(this.charId, this) < 0)
+		if (this.operation === "add" && evaluateResource(this.charId, this) < 0)
 			return null;
 		return operations[this.operation] &&
 			operations[this.operation].name || "No Operation";
