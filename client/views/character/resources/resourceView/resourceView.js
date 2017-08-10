@@ -55,7 +55,7 @@ Template.resourceView.helpers({
 		return operations[this.operation] &&
 			operations[this.operation].name || "No Operation";
 	},
-	statValue: function(){
+	resValue: function(){
 		if (
 			this.operation === "advantage" ||
 			this.operation === "disadvantage" ||

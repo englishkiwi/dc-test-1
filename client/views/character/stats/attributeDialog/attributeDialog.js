@@ -158,4 +158,7 @@ Template.attributeDialogView.helpers({
 	statValue: function(){
 		return evaluateEffect(this.charId, this);
 	},
+    resValue: function(){
+		return evaluateResource(this.charId, this);
+	},
 });
