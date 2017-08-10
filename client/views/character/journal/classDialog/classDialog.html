@@ -12,6 +12,7 @@
 
 			{{> effectsViewList charId=charId parentId=_id}}
 			{{> proficiencyViewList charId=charId parentId=_id}}
+            {{> resourcesViewList charId=charId parentId=_id}}
 		{{else}}
 			<!--Name-->
 			<paper-input id="classNameInput" label="Class Name" value={{name}}></paper-input>
@@ -20,6 +21,7 @@
 			<!--Effects-->
 			{{> effectsEditList parentId=_id parentCollection="Classes" charId=charId}}
 			{{> proficiencyEditList parentId=_id parentCollection="Classes" charId=charId}}
+            {{> resourcesEditList parentId=_id parentCollection="Classes" charId=charId}}
 		{{/baseDialog}}
 	{{/with}}
 </template>
