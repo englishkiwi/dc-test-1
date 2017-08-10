@@ -2,23 +2,17 @@
 	{{#with effect}}
 	{{#baseEditDialog hideColor=true title="Effect"}}
 		<div class="fit layout vertical effectEdit" style="padding: 24px;">
-            {{#if showEffectNameInput}}
-                <table class="paper-font-display1 effect-table-view" style="width: 100%;">
-                    <tr>
+			<table class="paper-font-display1 effect-table-view" style="width: 100%;">
+				<tr>
+                    {{#if showEffectNameInput}}
                         <paper-input class="effectNameInput"
                                  label="Name"
                                  floatinglabel
                                  value={{effectName}}>
                         </paper-input>
-                    </tr>
-                </table>
-            {{else}}
-                <table class="paper-font-display1 effect-table-view">
-                    <tr>
+                    {{else}}
                         {{> effectView}}
-                    </tr>
-                </table>
-            {{/if}}
+                    {{/if}}
 				</tr>
 			</table>
 			<hr class="vertMargin" style="width: 100%;">
