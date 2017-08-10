@@ -112,11 +112,9 @@
 </template>
 
 <template name="resource">
-    {{#if customRes.length}}
-        {{#each customRes}}
-            {{> effectView}}
-        {{/each}}
-    {{/if}}
+    {{#each customRes}}
+        {{> effectView}}
+    {{/each}}
 	{{#if characterCalculate "attributeBase" char._id name}}
 	<div>
 		<paper-material class="card layout horizontal featureCard">

@@ -57,7 +57,7 @@ Template.features.helpers({
 		return removeDuplicateProficiencies(profs);
 	},
     customRes: function(){
-		var resources = Effects.find({charId: this._id, stat: "custom"});
+		var resources = Effects.findOne({charId: this._id, stat: "custom"});
 		return resources;
 	},
 });
