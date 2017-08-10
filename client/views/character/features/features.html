@@ -112,6 +112,11 @@
 </template>
 
 <template name="resource">
+    {{#if customRes.length}}
+        {{#each customRes}}
+            {{> effectView}}
+        {{/each}}
+    {{/if}}
 	{{#if characterCalculate "attributeBase" char._id name}}
 	<div>
 		<paper-material class="card layout horizontal featureCard">
@@ -134,7 +139,7 @@
 			</div>
 		</paper-material>
 	</div>
-	{{/if}}
+    {{/if}}
 </template>
 
 <template name="attackListItem">

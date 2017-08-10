@@ -56,6 +56,10 @@ Template.features.helpers({
 		var profs = Proficiencies.find({charId: this._id, type: "tool"});
 		return removeDuplicateProficiencies(profs);
 	},
+    customRes: function(){
+		var resources = Effects.find({charId: this._id, stat: "custom"});
+		return resources;
+	},
 });
 
 Template.features.events({
