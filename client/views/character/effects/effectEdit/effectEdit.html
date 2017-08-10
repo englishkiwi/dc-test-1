@@ -4,7 +4,15 @@
 		<div class="fit layout vertical effectEdit" style="padding: 24px;">
 			<table class="paper-font-display1 effect-table-view">
 				<tr>
-					{{> effectView}}
+                    {{#if showEffectNameInput}}
+                        <paper-input class="effectNameInput"
+                                 label="Name"
+                                 floatinglabel
+                                 value={{effectName}}>
+                        </paper-input>
+                    {{else}}
+                        {{> effectView}}
+                    {{/if}}
 				</tr>
 			</table>
 			<hr class="vertMargin" style="width: 100%;">

@@ -147,6 +147,12 @@ Template.effectEdit.helpers({
 		) return false;
 		return true;
 	},
+    showEffectNameInput: function(){
+        if (
+            this.stat === "custom"
+        ) return true;
+        return false;
+    },
 	effectValue: function(){
 		return this.calculation || this.value;
 	},
@@ -154,6 +160,9 @@ Template.effectEdit.helpers({
 		var stat = statsDict[statName]
 		return stat && (stat.group === groupName);
 	},
+    effectName: function(){
+        return this.name && this.operation && this.value;
+    },
 });
 
 var setStat = function(statName, effectId){
@@ -253,4 +262,8 @@ Template.effectEdit.events({
 			});
 		}
 	}, 400),
+    "change .effectNameInput": function(event){
+		var name = event.currentTarget.value;
+		Effects.update(this._id, {$set: {name: name}});
+	},
 });
