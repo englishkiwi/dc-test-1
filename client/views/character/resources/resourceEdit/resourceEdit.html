@@ -21,10 +21,10 @@
 	</div>
 </template>
 
-<template name="nameDropdown">
-	<paper-dropdown-menu class="nameDropDown sideMargin flex" label="Resource">
+<template name="resDropdown">
+	<paper-dropdown-menu class="resDropDown sideMargin flex" label="Resource">
 		<dicecloud-selector class="nameMenu dropdown-content" selected={{name}}>
-			{{#each nameDropdownItems}}
+			{{#each resDropdownItems}}
 				<paper-item name={{stat}}>{{name}}</paper-item>
 			{{/each}}
 		</dicecloud-selector>

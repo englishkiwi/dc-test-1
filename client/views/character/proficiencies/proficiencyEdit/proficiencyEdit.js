@@ -45,7 +45,7 @@ Template.proficiencyEdit.helpers({
 	nameInputTemplate: function(){
 		if (!this.type) return null;
 		if (this.type === "skill" ||
-			this.type === "save") return "nameDropdown";
+			this.type === "save") return "profDropdown";
 		return "nameInput";
 	},
 });
@@ -67,7 +67,7 @@ Template.proficiencyEdit.events({
 		if (value == this.value) return;
 		Proficiencies.update(this._id, {$set: {value: value}});
 	},
-	"iron-select .nameDropDown": function(event){
+	"iron-select .profDropDown": function(event){
 		var detail = event.originalEvent.detail;
 		var name = detail.item.getAttribute("name");
 		if (name == this.name) return;
@@ -79,8 +79,8 @@ Template.proficiencyEdit.events({
 	},
 });
 
-Template.nameDropdown.helpers({
-	nameDropdownItems: function(){
+Template.profDropdown.helpers({
+	profDropdownItems: function(){
 		if (this.type === "skill") return skills;
 		if (this.type === "save") return saves;
 	}
