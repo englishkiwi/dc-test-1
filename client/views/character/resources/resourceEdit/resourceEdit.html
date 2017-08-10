@@ -7,7 +7,7 @@
 				{{/each}}
 			</dicecloud-selector>
 		</paper-dropdown-menu>
-		{{> UI.dynamic template=nameInputTemplate}}
+		{{> UI.dynamic template=resInputTemplate}}
 		<paper-dropdown-menu class="valueDropDown flex" label="Resource">
 			<dicecloud-selector class="valueMenu dropdown-content" selected={{value}}>
 				<paper-item name="1">Proficient</paper-item>
@@ -31,8 +31,8 @@
 	</paper-dropdown-menu>
 </template>
 
-<template name="nameInput">
-	<paper-input class="nameInput sideMargin"
+<template name="resInput">
+	<paper-input class="resInput sideMargin"
 				 label="Name"
 				 floatinglabel
 				 value={{name}}

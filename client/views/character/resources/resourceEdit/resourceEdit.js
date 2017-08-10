@@ -17,11 +17,11 @@ Template.resourceEdit.helpers({
 	resourceTypes: function(){
 		return profTypes;
 	},
-	nameInputTemplate: function(){
+	resInputTemplate: function(){
 		if (!this.type) return null;
 		if (this.type === "skill" ||
 			this.type === "save") return "resDropdown";
-		return "nameInput";
+		return "resInput";
 	},
 });
 
@@ -48,7 +48,7 @@ Template.resourceEdit.events({
 		if (name == this.name) return;
 		Resources.update(this._id, {$set: {name: name}});
 	},
-	"change .nameInput": function(event){
+	"change .resInput": function(event){
 		var name = event.currentTarget.value;
 		Resources.update(this._id, {$set: {name: name}});
 	},

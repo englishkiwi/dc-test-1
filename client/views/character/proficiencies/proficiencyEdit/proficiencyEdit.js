@@ -42,11 +42,11 @@ Template.proficiencyEdit.helpers({
 	proficiencyTypes: function(){
 		return profTypes;
 	},
-	nameInputTemplate: function(){
+	profInputTemplate: function(){
 		if (!this.type) return null;
 		if (this.type === "skill" ||
 			this.type === "save") return "profDropdown";
-		return "nameInput";
+		return "profInput";
 	},
 });
 
@@ -73,7 +73,7 @@ Template.proficiencyEdit.events({
 		if (name == this.name) return;
 		Proficiencies.update(this._id, {$set: {name: name}});
 	},
-	"change .nameInput": function(event){
+	"change .profInput": function(event){
 		var name = event.currentTarget.value;
 		Proficiencies.update(this._id, {$set: {name: name}});
 	},
