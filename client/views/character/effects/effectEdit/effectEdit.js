@@ -161,7 +161,7 @@ Template.effectEdit.helpers({
 		return stat && (stat.group === groupName);
 	},
     effectName: function(){
-        return this.name && this.operation && this.value;
+        return this.name;
     },
 });
 
