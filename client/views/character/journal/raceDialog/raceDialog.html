@@ -5,11 +5,11 @@
 		</div>
 		{{> effectsViewList charId=charId parentId=charId parentGroup="racial"}}
 		{{> proficiencyViewList charId=charId parentId=charId parentGroup="racial"}}
-        {{> proficiencyViewList charId=charId parentId=charId parentGroup="racial"}}
+        {{> resourceViewList charId=charId parentId=charId parentGroup="racial"}}
 	{{else}}
 		<paper-input id="raceInput" label="Race" value={{race}}></paper-input>
 		{{> effectsEditList parentId=charId parentCollection="Characters" charId=charId parentGroup="racial"}}
 		{{> proficiencyEditList parentId=charId parentCollection="Characters" charId=charId parentGroup="racial"}}
-        {{> proficiencyEditList parentId=charId parentCollection="Characters" charId=charId parentGroup="racial"}}
+        {{> resourceEditList parentId=charId parentCollection="Characters" charId=charId parentGroup="racial"}}
 	{{/baseDialog}}
 </template>
