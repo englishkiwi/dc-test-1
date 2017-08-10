@@ -128,8 +128,9 @@ Template.effectView.helpers({
 		}
 	},
 	statName: function(){
-		//return stats[this.stat] && stats[this.stat].name || "No Stat";
-        return this.name || "No Stat";
+        if (this.stat === "custom") 
+            return this.name || "No Stat";
+		return stats[this.stat] && stats[this.stat].name || "No Stat";
 	},
 	operationName: function(){
 		if (
