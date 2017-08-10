@@ -20,7 +20,7 @@ Template.resourceEdit.helpers({
 	nameInputTemplate: function(){
 		if (!this.type) return null;
 		if (this.type === "skill" ||
-			this.type === "save") return "resDropdown";
+			this.type === "save") return "nameDropdown";
 		return "nameInput";
 	},
 });
@@ -42,7 +42,7 @@ Template.resourceEdit.events({
 		if (value == this.value) return;
 		Resources.update(this._id, {$set: {value: value}});
 	},
-	"iron-select .resDropDown": function(event){
+	"iron-select .nameDropDown": function(event){
 		var detail = event.originalEvent.detail;
 		var name = detail.item.getAttribute("name");
 		if (name == this.name) return;
@@ -54,8 +54,8 @@ Template.resourceEdit.events({
 	},
 });
 
-Template.resDropdown.helpers({
-	resDropdownItems: function(){
+Template.nameDropdown.helpers({
+	nameDropdownItems: function(){
 		if (this.type === "points") return points;
 	}
 });
